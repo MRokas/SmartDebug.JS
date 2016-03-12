@@ -1,6 +1,12 @@
 # SmartDebug.JS
 Next-generation debugging for javascript!
 
+## Inspired by
+
+Sadly, I do not know original author of image - but I would be more than glad to credit him for this awesome idea.
+
+![Inspiration](https://github.com/MRokas/SmartDebug.JS/blob/master/Inspiration.jpg?raw=true)
+
 ## Usage
 
     tryit(function() {  

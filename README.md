@@ -21,4 +21,4 @@ You can also set static property `tryit.con = true;` so it will use print to con
 
 ## TODO
 
-* AMD & CommonJS
+* Improve *Usage* section

@@ -7,7 +7,7 @@
     else this[name] = definition();
 }('tryit', function() {
     function tryit(fn, con) {
-    con = typeof con !== undefined ? con : tryit.con;
+    con = typeof con !== 'undefined' ? con : tryit.con;
     con = typeof con === 'boolean'
         ? con 
             ? console.log.bind(console)

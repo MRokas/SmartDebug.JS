@@ -7,27 +7,53 @@ Sadly, I do not know original author of image - but I would be more than glad to
 
 ![Inspiration](https://github.com/MRokas/SmartDebug.JS/blob/master/Inspiration.jpg?raw=true)
 
+## Getting started
+
+First clone git:
+
+```git clone http://github.com/MRokas/SmartDebug.JS.git```
+
+And then include it by using your preferred method: 
+
+```<script src="js/smartdebug.js"></script> ```
+
+```import tryit from "js/smartdebug" ```
+    
+```require("js/smartdebug") ```
+
 ## Usage
+
+Basic usage with redirecting to stackoverflow:
 
     tryit(function() {  
         console.log(a);  
     });
-    
-Incase of a being undefined it will redirect you to [http://stackoverflow.com/search?q=[js] + a is not defined](http://stackoverflow.com/search?q=[js]%20+%20a%20is%20not%20defined)
+    // redirects to http://stackoverflow.com/search?q=[js] + a is not defined
 
-And if you don't rather to print link to the console (Node.JS environment, or gathering bunch of links), just set second argument to true!
+If you don't want to be redirected, you can print link to the console:
 
     tryit(function() {  
         console.log(a);  
     }, true);
-    
-    // console output: http://stackoverflow.com/search?q=[js] + a is not defined
-    
-You can also set static property `tryit.con = true;` so it will use print to console without using second argumen.
+    // Console output: http://stackoverflow.com/search?q=[js] + a is not defined
+
+Or provide your own function to deal with link:
+
+    var errors = [];
+    tryit(function() {  
+        console.log(a);  
+    }, function (arg1) {
+        errors.push(arg1)
+    });
+
+    console.log(errors);
+    // Console output: Array [ "http://stackoverflow.com/search?q=[js] + a is not defined" ]
+
 
 ## TODO
 
-* Improve *Usage* section
+* User provided link for searching
+* Set default action by using ```tryit.con``` variable
  
 ## DISCLAIMER
 

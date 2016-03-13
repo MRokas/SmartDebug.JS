@@ -28,3 +28,7 @@ You can also set static property `tryit.con = true;` so it will use print to con
 ## TODO
 
 * Improve *Usage* section
+ 
+## DISCLAIMER
+
+This is just a satire, enjoy.

@@ -6,10 +6,10 @@
     else if (typeof define == 'function' && typeof define.amd == 'object') define(definition);
     else this[name] = definition();
 }('SmartDebug', function() {
-    function SmartDebug(obj) {
-        var _run = typeof obj !== 'undefined' && typeof obj.run !== 'undefined' ? obj.run : undefined;
-        var _cb = typeof obj !== 'undefined' && typeof obj.callback !== 'undefined' ? obj.callback : SmartDebug.callback;
-        var _link = typeof obj !== 'undefined' && typeof obj.link !== 'undefined' ? obj.link : SmartDebug.link;
+    function SmartDebug(arg1) {
+        var _run = typeof arg1 === 'object' && typeof arg1.run !== 'undefined' ? arg1.run : typeof arg1 === 'function' ? arg1 : undefined ;
+        var _cb = typeof arg1 === 'object' && typeof arg1.callback !== 'undefined' ? arg1.callback : SmartDebug.callback;
+        var _link = typeof arg1 === 'object' && typeof arg1.link !== 'undefined' ? arg1.link : SmartDebug.link;
         _cb = typeof _cb === 'boolean'
             ? _cb
                 ? (SmartDebug.callback !== false ? SmartDebug.callback : console.log.bind(console))

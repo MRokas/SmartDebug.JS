@@ -23,6 +23,11 @@ And then include it by using your preferred method:
 
 ## Usage
 
+Basic usage using default settings:
+
+    SmartDebug(function() { console.log(a); });
+    // redirects to http://stackoverflow.com/search?q=[js] + a is not defined
+
 Basic usage with redirecting to stackoverflow:
 
     SmartDebug({
